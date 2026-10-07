@@ -151,7 +151,46 @@ footer{border-top:5px solid var(--gold);background:linear-gradient(135deg,#031d1
   .day .rate{font-size:6px}
   .day.booked .rate:after{font-size:6px}
 }
+/* Improved booked / blocked night styling */
+.day.booked{
+  background:#f6d6d6;
+  border:1px solid #dc8f8f;
+  color:#8f2f2f;
+}
 
+.day.booked .num{
+  color:#8f2f2f;
+  font-weight:850;
+}
+
+.day.booked .rate{
+  color:#a23b3b;
+}
+
+/* Small legend indicator */
+.legend .blocked{
+  width:18px;
+  height:18px;
+  min-width:18px;
+  min-height:18px;
+  display:inline-block;
+  border-radius:5px;
+  background:#f6d6d6;
+  border:1px solid #dc8f8f;
+  border-top:3px solid #b94a48;
+  box-shadow:none;
+}
+
+@media(max-width:560px){
+  .legend .blocked{
+    width:14px;
+    height:14px;
+    min-width:14px;
+    min-height:14px;
+    border-radius:4px;
+    border-top-width:2px;
+  }
+}
 </style>
 </head>
 <body>
@@ -197,7 +236,7 @@ footer{border-top:5px solid var(--gold);background:linear-gradient(135deg,#031d1
  <div class="calHead"><button id="prevMonth" aria-label="Previous month">‹</button><strong id="monthTitle"></strong><button id="nextMonth" aria-label="Next month">›</button></div>
  <div class="week"><div class="dow">SUN</div><div class="dow">MON</div><div class="dow">TUE</div><div class="dow">WED</div><div class="dow">THU</div><div class="dow">FRI</div><div class="dow">SAT</div></div>
  <div class="days" id="calendarDays"></div>
- <div class="legend"><span><i class="dot sel"></i>Selected</span><span><i class="dot book"></i>Booked/blocked</span><span>Rate shown per night</span></div>
+ <div class="legend"><span><i class="dot sel"></i>Selected</span><span><i class="dot book"></i>Unavailable</span><span>Rate shown per night</span></div>
  <p class="calHint">Select your check-in date, then your check-out date. Checkout day is not charged as a night.</p>
 </div>
 <div class="fields" style="grid-template-columns:1fr"><div class="field full" style="border-top:0"><label>GUESTS</label><select id="guests"><option>1 guest</option><option selected>2 guests</option><option>3 guests</option><option>4 guests</option><option>5 guests</option><option>6 guests</option></select></div></div>
