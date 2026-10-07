@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RSAinn | Driftsands 108 Uvongo</title>
+<meta name="description" content="Stay at Driftsands 108 in Uvongo and explore beaches, the lagoon, waterfall and adventures of the KZN South Coast.">
+<style>
+:root{--g:#064c3b;--g2:#08705a;--emerald:#006b54;--emerald-deep:#043d32;--gold:#d4af37;--gold-deep:#a97d16;--ink:#16211d;--muted:#66716c;--line:#e4e8e6;--soft:#f5f8f6;--sand:#f7f3ea;--red:#a94442;--shadow:0 16px 42px rgba(8,35,29,.11)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff}button,input,select{font:inherit}.wrap{max-width:1180px;margin:auto;padding:0 22px}
+header{height:76px;position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.logo{width:76px;height:62px;object-fit:contain}.links{display:flex;align-items:center;gap:24px}.links a{text-decoration:none;color:var(--ink);font-size:14px;font-weight:750}.btn{border:0;border-radius:12px;padding:13px 18px;background:var(--g);color:#fff;font-weight:850;cursor:pointer;text-decoration:none;display:inline-block}.btn:hover{background:var(--g2)}
+.hero{padding:50px 0 25px}.eyebrow{font-size:12px;font-weight:900;letter-spacing:.12em;color:var(--g);text-transform:uppercase}.hero h1{font-family:Georgia,serif;font-size:clamp(43px,6vw,72px);line-height:.98;margin:12px 0}.hero h1 em{font-style:normal;color:var(--g)}.lead{font-size:20px;line-height:1.55;color:#56615c;max-width:760px}.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.pill{border:1px solid var(--line);padding:9px 12px;border-radius:999px;font-size:14px;font-weight:700}
+
+
+.gallerySection{margin:18px 0 45px}.galleryTop{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:13px}.galleryTop h2{margin:0}.galleryTop p{margin:4px 0 0;color:var(--muted);font-size:13px}
+.carousel{position:relative;border-radius:22px;overflow:hidden;background:#dfe9e4;box-shadow:var(--shadow)}.track{display:flex;transition:transform .38s ease}.slide{min-width:100%;height:510px;position:relative;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#dce8e3,#aebfb8)}.slide.area{background:linear-gradient(145deg,#cfe1da,#78a493)}.slide img{width:100%;height:100%;object-fit:cover}.placeholder{text-align:center;padding:25px;color:var(--g)}.placeholder .big{font-size:48px;display:block;margin-bottom:10px}.placeholder strong{font-family:Georgia,serif;font-size:29px;display:block}.placeholder small{display:block;margin-top:8px;color:#4e675e}
+.caption{position:absolute;left:18px;bottom:18px;right:18px;background:rgba(7,35,29,.86);color:#fff;border-radius:14px;padding:13px 16px;backdrop-filter:blur(7px)}.caption strong{display:block;font-family:Georgia,serif;font-size:19px}.caption span{font-size:12px;color:#dce7e2}
+.arrow{position:absolute;z-index:4;top:50%;transform:translateY(-50%);width:43px;height:43px;border:0;border-radius:50%;background:rgba(255,255,255,.93);box-shadow:0 4px 16px rgba(0,0,0,.18);font-size:25px;cursor:pointer}.arrow.prev{left:13px}.arrow.next{right:13px}.counter{position:absolute;z-index:4;right:15px;top:15px;background:rgba(7,35,29,.82);color:#fff;border-radius:999px;padding:7px 11px;font-size:11px;font-weight:850}.dots{display:flex;justify-content:center;gap:6px;margin-top:12px}.gdot{width:7px;height:7px;border-radius:50%;border:0;padding:0;background:#cbd3cf;cursor:pointer}.gdot.active{background:var(--g);width:20px;border-radius:6px}.galleryButton{border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 12px;font-size:12px;font-weight:850;cursor:pointer}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(3,12,10,.96);z-index:200;align-items:center;justify-content:center;padding:22px}.lightbox.open{display:flex}.lightboxInner{width:min(1100px,100%);position:relative}.lightbox .slide{height:min(76vh,720px);border-radius:15px;overflow:hidden}.closeLB{position:absolute;z-index:8;right:0;top:-48px;border:0;background:#fff;width:38px;height:38px;border-radius:50%;font-size:22px;cursor:pointer}.lbCaption{color:#fff;text-align:center;margin-top:12px;font-size:14px}.exploreGallery{padding:0 0 70px;background:var(--g);color:#fff}.exploreGallery .galleryTop p{color:#cbdad4}.exploreGallery .gdot{background:#67877d}.exploreGallery .gdot.active{background:#fff}
+
+.introgrid{display:grid;grid-template-columns:1fr 390px;gap:55px;align-items:start}.section{padding:32px 0;border-bottom:1px solid var(--line)}h2{font-family:Georgia,serif;font-size:32px;margin:0 0 14px}p.copy{line-height:1.75;color:#4d5954}.amenities{display:grid;grid-template-columns:1fr 1fr;gap:12px}.amenity{padding:15px;border:1px solid var(--line);border-radius:14px;font-weight:700}.amenity b{color:var(--g);margin-right:7px}
+.book{position:sticky;top:98px;border:1px solid #d9dfdc;border-radius:20px;padding:22px;background:#fff;box-shadow:var(--shadow)}.book h3{font-family:Georgia,serif;font-size:26px;margin:0 0 5px}.small{font-size:12px;color:var(--muted)}.fields{display:grid;grid-template-columns:1fr 1fr;border:1px solid #ccd3cf;border-radius:13px;overflow:hidden;margin:18px 0 10px}.field{padding:10px}.field+ .field{border-left:1px solid #ccd3cf}.field.full{grid-column:1/-1;border-top:1px solid #ccd3cf;border-left:0}.field label{font-size:10px;font-weight:900;display:block}.field input,.field select{width:100%;border:0;outline:0;background:#fff;padding:5px 0}.clean{background:var(--soft);padding:13px;border-radius:12px;margin:12px 0}.clean label{display:flex;gap:9px}.btn.full{width:100%;text-align:center;margin-top:6px}.summary{display:none;margin-top:14px}.row{display:flex;justify-content:space-between;padding:7px 0}.total{border-top:1px solid var(--line);font-weight:900;padding-top:12px}.note{font-size:11px;color:var(--muted);line-height:1.5;margin-top:11px}
+.explore{margin-top:62px;background:var(--g);color:#fff;padding:70px 0}.explore .eyebrow{color:#e4c57d}.explore h2{font-size:clamp(36px,5vw,55px);max-width:720px}.explorelead{color:#d4ded9;font-size:18px;line-height:1.65;max-width:780px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}.card{min-height:260px;border-radius:18px;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(160deg,#1b6656,#0a3028);border:1px solid rgba(255,255,255,.12)}.card .icon{font-size:29px;margin-bottom:auto}.card h3{font-family:Georgia,serif;font-size:23px;margin:0 0 8px}.card p{color:#d2ddd8;line-height:1.55;margin:0;font-size:14px}
+.beaches{padding:70px 0}.beachrow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.beach{background:var(--sand);border-radius:16px;padding:20px 14px;min-height:150px}.beach strong{display:block;font-family:Georgia,serif;font-size:20px;margin-bottom:8px}.beach span{font-size:13px;color:var(--muted);line-height:1.5}
+.daytrips{background:var(--soft);padding:65px 0}.daygrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.trip{background:#fff;border:1px solid var(--line);border-radius:18px;padding:25px}.trip h3{font-family:Georgia,serif;font-size:24px;margin:0 0 8px}.trip p{color:var(--muted);line-height:1.6}.trip a{color:var(--g);font-weight:850;text-decoration:none}
+.location{padding:65px 0}.map{height:280px;border-radius:20px;background:linear-gradient(145deg,#e8eeeb,#d2dfd8);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--g);font-weight:850}
+.finalcta{padding:70px 0;text-align:center}.finalcta h2{font-size:42px}.finalcta p{color:var(--muted);font-size:18px}
+footer{background:#071b17;color:#fff;padding:45px 0}.foot{display:flex;justify-content:space-between;align-items:center;gap:25px}.foot img{width:110px}.foot p{margin:5px 0;color:#c7d1cd}.mobile{display:none}
+
+
+.calendarBox{margin:16px 0;border:1px solid var(--line);border-radius:16px;padding:14px;background:#fff}
+.calHead{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.calHead button{width:34px;height:34px;border:1px solid var(--line);background:#fff;border-radius:10px;cursor:pointer;font-weight:900}.calHead strong{font-family:Georgia,serif;font-size:18px}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin-bottom:4px}.dow{text-align:center;font-size:9px;font-weight:900;color:var(--muted);padding:4px 0}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}.day{min-height:52px;border:1px solid transparent;border-radius:9px;background:#fff;padding:5px 2px;text-align:center;cursor:pointer;position:relative}.day:hover:not(.disabled):not(.booked){border-color:#9ab8ae}.day .num{font-size:12px;font-weight:850}.day .rate{font-size:8px;color:var(--muted);margin-top:4px}.day.muted{opacity:.18;cursor:default}.day.disabled{opacity:.3;cursor:not-allowed}.day.booked{background:#f7eded;color:#9a6666;cursor:not-allowed;text-decoration:line-through}.day.selected{background:var(--g);color:#fff}.day.selected .rate{color:#dbe8e3}.day.range{background:#e7f0ed;border-radius:3px}.day.range .rate{color:var(--g)}.day.selected.range{background:var(--g);border-radius:9px}.legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;font-size:10px;color:var(--muted)}.dot{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:4px;border:1px solid #ccc}.dot.sel{background:var(--g)}.dot.book{background:#f7eded}.dateReadout{display:grid;grid-template-columns:1fr 1fr;border:1px solid #ccd3cf;border-radius:12px;overflow:hidden;margin:10px 0}.dateReadout div{padding:10px}.dateReadout div+div{border-left:1px solid #ccd3cf}.dateReadout label{font-size:9px;font-weight:900;display:block}.dateReadout strong{font-size:12px}
+.calHint{font-size:11px;color:var(--muted);line-height:1.4;margin:5px 0 0}
+
+.offers{padding:68px 0;background:var(--sand)}.offergrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:25px}.offer{background:#fff;border:1px solid #eadfca;border-radius:20px;padding:26px;position:relative;overflow:hidden}.offer:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--gold)}.offerbadge{display:inline-block;background:var(--g);color:#fff;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:900;letter-spacing:.06em}.offer h3{font-family:Georgia,serif;font-size:26px;margin:15px 0 8px}.offer p{color:var(--muted);line-height:1.6;margin:0}.saving{color:var(--g);font-weight:900}.promoLine{color:var(--g);font-weight:850}.strike{text-decoration:line-through;color:var(--muted);font-weight:500}
+
+@media(max-width:900px){.links a:not(.btn){display:none}
+.gallerySection{margin:18px 0 45px}.galleryTop{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:13px}.galleryTop h2{margin:0}.galleryTop p{margin:4px 0 0;color:var(--muted);font-size:13px}
+.carousel{position:relative;border-radius:22px;overflow:hidden;background:#dfe9e4;box-shadow:var(--shadow)}.track{display:flex;transition:transform .38s ease}.slide{min-width:100%;height:510px;position:relative;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#dce8e3,#aebfb8)}.slide.area{background:linear-gradient(145deg,#cfe1da,#78a493)}.slide img{width:100%;height:100%;object-fit:cover}.placeholder{text-align:center;padding:25px;color:var(--g)}.placeholder .big{font-size:48px;display:block;margin-bottom:10px}.placeholder strong{font-family:Georgia,serif;font-size:29px;display:block}.placeholder small{display:block;margin-top:8px;color:#4e675e}
+.caption{position:absolute;left:18px;bottom:18px;right:18px;background:rgba(7,35,29,.86);color:#fff;border-radius:14px;padding:13px 16px;backdrop-filter:blur(7px)}.caption strong{display:block;font-family:Georgia,serif;font-size:19px}.caption span{font-size:12px;color:#dce7e2}
+.arrow{position:absolute;z-index:4;top:50%;transform:translateY(-50%);width:43px;height:43px;border:0;border-radius:50%;background:rgba(255,255,255,.93);box-shadow:0 4px 16px rgba(0,0,0,.18);font-size:25px;cursor:pointer}.arrow.prev{left:13px}.arrow.next{right:13px}.counter{position:absolute;z-index:4;right:15px;top:15px;background:rgba(7,35,29,.82);color:#fff;border-radius:999px;padding:7px 11px;font-size:11px;font-weight:850}.dots{display:flex;justify-content:center;gap:6px;margin-top:12px}.gdot{width:7px;height:7px;border-radius:50%;border:0;padding:0;background:#cbd3cf;cursor:pointer}.gdot.active{background:var(--g);width:20px;border-radius:6px}.galleryButton{border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 12px;font-size:12px;font-weight:850;cursor:pointer}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(3,12,10,.96);z-index:200;align-items:center;justify-content:center;padding:22px}.lightbox.open{display:flex}.lightboxInner{width:min(1100px,100%);position:relative}.lightbox .slide{height:min(76vh,720px);border-radius:15px;overflow:hidden}.closeLB{position:absolute;z-index:8;right:0;top:-48px;border:0;background:#fff;width:38px;height:38px;border-radius:50%;font-size:22px;cursor:pointer}.lbCaption{color:#fff;text-align:center;margin-top:12px;font-size:14px}.exploreGallery{padding:0 0 70px;background:var(--g);color:#fff}.exploreGallery .galleryTop p{color:#cbdad4}.exploreGallery .gdot{background:#67877d}.exploreGallery .gdot.active{background:#fff}
+
+.introgrid{display:block}.book{position:static;margin:28px 0}.cards{grid-template-columns:1fr 1fr}.beachrow{grid-template-columns:1fr 1fr}.daygrid{grid-template-columns:1fr}.offergrid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:280px 150px}.ph:first-child{grid-column:1/-1;grid-row:auto}.ph:nth-child(n+4){display:none}.mobile{display:flex;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);z-index:60;padding:10px 15px;justify-content:space-between;align-items:center}.mobile .btn{padding:11px 14px}.foot{padding-bottom:55px}}
+@media(max-width:560px){.slide{height:350px}.arrow{width:38px;height:38px}.galleryTop{align-items:start}.galleryButton{white-space:nowrap}
+.wrap{padding:0 16px}.hero{padding-top:30px}.hero h1{font-size:44px}.lead{font-size:17px}.gallery{margin-left:-16px;margin-right:-16px;border-radius:0}.amenities,.cards,.beachrow{grid-template-columns:1fr}.card{min-height:220px}.explore,.beaches,.daytrips,.location,.finalcta{padding:50px 0}.book{box-shadow:none}.finalcta h2{font-size:34px}}
+
+/* V6 RSAinn African-inspired brand accents */
+header:after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:7px;background:
+linear-gradient(135deg,transparent 25%,var(--gold) 25% 50%,transparent 50% 75%,var(--g) 75%) 0 0/28px 14px,
+linear-gradient(45deg,#b84b3e 25%,transparent 25% 75%,#d9a52f 75%) 14px 0/28px 14px}
+.africanBand{height:18px;background:
+linear-gradient(135deg,var(--g) 25%,transparent 25%) 0 0/24px 24px,
+linear-gradient(225deg,var(--gold) 25%,transparent 25%) 0 0/24px 24px,
+linear-gradient(315deg,#b84b3e 25%,transparent 25%) 12px 0/24px 24px,
+linear-gradient(45deg,#d9a52f 25%,#f4efe4 25%) 12px 0/24px 24px}
+.brandMark{display:inline-block;width:38px;height:9px;margin-left:9px;vertical-align:middle;background:
+linear-gradient(135deg,var(--g) 25%,var(--gold) 25% 50%,#b84b3e 50% 75%,#d9a52f 75%);clip-path:polygon(0 50%,15% 0,30% 50%,45% 0,60% 50%,75% 0,100% 50%,75% 100%,60% 50%,45% 100%,30% 50%,15% 100%)}
+.hero{position:relative}.hero:before{content:"";position:absolute;right:0;top:28px;width:145px;height:145px;opacity:.08;background:
+repeating-linear-gradient(45deg,var(--g) 0 8px,transparent 8px 18px),
+repeating-linear-gradient(-45deg,var(--gold) 0 8px,transparent 8px 18px);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.offers{position:relative;overflow:hidden}.offers:before,.offers:after{content:"";position:absolute;width:180px;height:180px;opacity:.08;background:
+conic-gradient(from 45deg,var(--g) 0 25%,var(--gold) 0 50%,#b84b3e 0 75%,#d9a52f 0);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}.offers:before{left:-90px;top:-90px}.offers:after{right:-90px;bottom:-90px}
+.explore{position:relative;border-top:18px solid transparent;border-image:repeating-linear-gradient(90deg,var(--gold) 0 22px,#b84b3e 22px 44px,#f4efe4 44px 66px,var(--g2) 66px 88px) 18}
+.explore .card{position:relative;overflow:hidden}.explore .card:after{content:"";position:absolute;right:-18px;top:-18px;width:70px;height:70px;opacity:.13;background:conic-gradient(var(--gold),#b84b3e,var(--gold),#fff,var(--gold));clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.daytrips{border-top:8px solid transparent;border-image:repeating-linear-gradient(90deg,var(--g) 0 28px,var(--gold) 28px 56px,#b84b3e 56px 84px,#d9a52f 84px 112px) 8}
+footer{position:relative;overflow:hidden}footer:before{content:"";position:absolute;inset:0;opacity:.08;background:
+linear-gradient(135deg,transparent 35%,var(--gold) 35% 45%,transparent 45% 55%,#b84b3e 55% 65%,transparent 65%) 0 0/90px 90px}
+footer .foot{position:relative;z-index:1}
+
+
+/* V6.1 richer emerald + gold visual treatment */
+.btn{background:linear-gradient(135deg,var(--emerald-deep),var(--emerald));box-shadow:0 7px 18px rgba(0,77,60,.18)}
+.btn:hover{background:linear-gradient(135deg,var(--emerald),var(--g2))}
+.pill{background:#fff;border-color:#d7c27d}.pill:nth-child(odd){box-shadow:inset 0 -2px 0 rgba(212,175,55,.28)}
+.book{border-top:4px solid var(--gold);box-shadow:0 18px 45px rgba(4,61,50,.14)}
+.book h3,.offer h3,.trip h3{color:var(--emerald-deep)}
+.offerbadge{background:linear-gradient(135deg,var(--emerald-deep),var(--emerald));border:1px solid rgba(212,175,55,.65)}
+.offer{box-shadow:0 10px 28px rgba(4,61,50,.07)}.offer:before{background:linear-gradient(var(--gold),var(--gold-deep))}
+.galleryButton{border-color:#d7c27d;color:var(--emerald-deep)}
+.carousel{outline:1px solid rgba(212,175,55,.35)}
+.arrow{color:var(--emerald-deep);border:1px solid rgba(212,175,55,.55)}
+.counter{border:1px solid rgba(212,175,55,.55)}
+.explore{background:linear-gradient(145deg,var(--emerald-deep),#075947 62%,#064336)}
+.explore .card{background:linear-gradient(160deg,#08705a,#04382e);border-color:rgba(212,175,55,.28)}
+.explore .card h3{color:#fff}.explore .card .icon{filter:drop-shadow(0 3px 7px rgba(0,0,0,.18))}
+.exploreGallery{background:linear-gradient(180deg,#064336,var(--emerald-deep))}
+.beach{border:1px solid rgba(212,175,55,.24)}.beach strong{color:var(--emerald-deep)}
+.daytrips .trip{border-top:3px solid var(--gold)}
+.map{border:1px solid rgba(212,175,55,.35)}
+.finalcta{background:linear-gradient(180deg,#fff,#fbf7eb)}
+.finalcta h2{color:var(--emerald-deep)}
+footer{border-top:5px solid var(--gold);background:linear-gradient(135deg,#031d17,#064336)}
+::selection{background:var(--gold);color:var(--emerald-deep)}
+
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><img class="logo" src="rsainn-logo-light.png" alt="RSAinn Holiday Getaways"><nav class="links"><a href="#stay">The stay</a><a href="#explore">Explore</a><a href="#offers">Special offers</a><a href="#location">Location</a><a class="btn" href="#booking">Check availability</a></nav></div></header><div class="africanBand" aria-hidden="true"></div>
+
+<main>
+<div class="wrap">
+<section class="hero">
+<div class="eyebrow">RSAinn Holiday Getaways · Uvongo · KZN South Coast <span class="brandMark" aria-hidden="true"></span></div>
+<h1>Stay. Explore.<br><em>Make Memories.</em></h1>
+<p class="lead">Make Driftsands 108 your comfortable seaside base and discover the beaches, lagoon, waterfall, fishing and adventures that make the KwaZulu-Natal South Coast such a memorable getaway.</p>
+<div class="facts"><span class="pill">Driftsands 108</span><span class="pill">Sleeps 6</span><span class="pill">2 bedrooms</span><span class="pill">2 bathrooms</span><span class="pill">Sea view</span><span class="pill">Wi-Fi</span><span class="pill">Aircon</span><span class="pill">Gas braai</span><span class="pill">🐋 Seasonal whale sightings</span></div>
+</section>
+
+
+<section class="gallerySection" id="property-gallery">
+<div class="galleryTop"><div><div class="eyebrow">Inside Driftsands 108</div><h2>Take a look around</h2><p>Property gallery · actual RSAinn photos will replace these prepared placeholders.</p></div><button class="galleryButton" onclick="openLightbox('property')">View full screen</button></div>
+<div class="carousel" data-gallery="property"><div class="track">
+<div class="slide"><div class="placeholder"><span class="big">🌊</span><strong>Sea View</strong><small>Main property hero image</small></div><div class="caption"><strong>Driftsands 108</strong><span>Your comfortable seaside base in Uvongo.</span></div></div>
+<div class="slide"><div class="placeholder"><span class="big">🛋️</span><strong>Living Room</strong><small>Living-area photo</small></div><div class="caption"><strong>Living Area</strong><span>A relaxed space to unwind after a day on the South Coast.</span></div></div>
+<div class="slide"><div class="placeholder"><span class="big">🌅</span><strong>Balcony</strong><small>Balcony & sea-view photo</small></div><div class="caption"><strong>Sea-view Balcony · Seasonal Whale Watching 🐋</strong><span>During whale season, keep an eye on the ocean — migrating whales may sometimes be spotted from the balcony. Sightings cannot be guaranteed.</span></div></div>
+<div class="slide"><div class="placeholder"><span class="big">🛏️</span><strong>Main Bedroom</strong><small>Queen-size bed</small></div><div class="caption"><strong>Main Bedroom</strong><span>Queen-size bed.</span></div></div>
+<div class="slide"><div class="placeholder"><span class="big">🛏️</span><strong>Second Bedroom</strong><small>Two single beds</small></div><div class="caption"><strong>Second Bedroom</strong><span>Two single beds.</span></div></div>
+<div class="slide"><div class="placeholder"><span class="big">🍳</span><strong>Kitchen</strong><small>Kitchen photo</small></div><div class="caption"><strong>Kitchen</strong><span>Kitchen essentials for an easy self-catering stay.</span></div></div>
+<div class="slide"><div class="placeholder"><span class="big">🚿</span><strong>Bathrooms</strong><small>Bathroom photos</small></div><div class="caption"><strong>Two Bathrooms</strong><span>One bathroom with bath and an en-suite shower.</span></div></div>
+<div class="slide"><div class="placeholder"><span class="big">🏊</span><strong>Communal Pool</strong><small>Pool photo</small></div><div class="caption"><strong>Communal Pool</strong><span>Enjoy the complex swimming pool during your stay.</span></div></div>
+<div class="slide"><div class="placeholder"><span class="big">🔥</span><strong>Braai & Outdoor Areas</strong><small>Outdoor photo</small></div><div class="caption"><strong>Outdoor Living</strong><span>Weber gas braai at the apartment plus communal outdoor areas.</span></div></div>
+<div class="slide"><div class="placeholder"><span class="big">🚗</span><strong>Parking & Entrance</strong><small>Arrival photo</small></div><div class="caption"><strong>Arrival</strong><span>Dedicated parking and access information for guests.</span></div></div>
+</div><button class="arrow prev" aria-label="Previous photo">‹</button><button class="arrow next" aria-label="Next photo">›</button><div class="counter"></div></div><div class="dots" data-dots="property"></div>
+</section>
+
+<div class="introgrid">
+<div>
+<section class="section" id="stay"><div class="eyebrow">Your home base</div><h2>Driftsands 108</h2><p class="copy">A relaxed two-bedroom, two-bathroom apartment in Uvongo for up to six guests. It gives you the essentials for an easy coastal stay: a sea-view balcony, Wi-Fi, air conditioning, a comfortable living area and a Weber gas braai. Spend the day exploring, then come home, put your feet up and enjoy the South Coast pace.</p></section>
+<section class="section"><h2>What the apartment offers</h2><div class="amenities"><div class="amenity"><b>✓</b> Sea-view balcony</div><div class="amenity"><b>✓</b> Wi-Fi</div><div class="amenity"><b>✓</b> Air conditioning</div><div class="amenity"><b>✓</b> Weber gas braai</div><div class="amenity"><b>✓</b> Communal pool</div><div class="amenity"><b>✓</b> Children's play area</div><div class="amenity"><b>✓</b> Kitchen essentials</div><div class="amenity"><b>✓</b> Dedicated parking</div><div class="amenity"><b>🐋</b> Seasonal whale sightings from balcony</div></div></section>
+<section class="section"><h2>Sleeping arrangements</h2><p class="copy"><strong>Main bedroom</strong> — queen-size bed<br><strong>Second bedroom</strong> — two single beds<br><strong>Living area</strong> — sleeper couch</p></section>
+</div>
+
+<aside class="book" id="booking">
+<h3>Plan your stay</h3><div class="small">Choose your dates to see your estimated stay total.</div>
+<div class="dateReadout"><div><label>CHECK-IN</label><strong id="inText">Select date</strong></div><div><label>CHECK-OUT</label><strong id="outText">Select date</strong></div></div>
+<div class="calendarBox">
+ <div class="calHead"><button id="prevMonth" aria-label="Previous month">‹</button><strong id="monthTitle"></strong><button id="nextMonth" aria-label="Next month">›</button></div>
+ <div class="week"><div class="dow">SUN</div><div class="dow">MON</div><div class="dow">TUE</div><div class="dow">WED</div><div class="dow">THU</div><div class="dow">FRI</div><div class="dow">SAT</div></div>
+ <div class="days" id="calendarDays"></div>
+ <div class="legend"><span><i class="dot sel"></i>Selected</span><span><i class="dot book"></i>Booked/blocked</span><span>Rate shown per night</span></div>
+ <p class="calHint">Select your check-in date, then your check-out date. Checkout day is not charged as a night.</p>
+</div>
+<div class="fields" style="grid-template-columns:1fr"><div class="field full" style="border-top:0"><label>GUESTS</label><select id="guests"><option>1 guest</option><option selected>2 guests</option><option>3 guests</option><option>4 guests</option><option>5 guests</option><option>6 guests</option></select></div></div>
+<div class="clean"><label><input id="clean" type="checkbox"><span><strong>Optional housekeeping</strong><br><span class="small">R150 per service</span></span></label><div id="cleanqty" style="display:none;margin-top:10px"><select id="qty"><option value="1">1 service</option><option value="2">2 services</option><option value="3">3 services</option><option value="4">4 services</option></select></div></div>
+<button class="btn full" id="calc">Check dates & price</button>
+<div class="summary" id="summary">
+<div class="row"><span id="nights"></span><strong id="baseprice"></strong></div>
+<div class="row promoLine" id="promorow" style="display:none"><span id="promoname"></span><strong id="discount"></strong></div>
+<div class="row"><span>Accommodation</span><strong id="stayprice"></strong></div>
+<div class="row" id="cleanrow" style="display:none"><span>Housekeeping</span><strong id="cleanprice"></strong></div>
+<div class="row total"><span>Estimated total</span><span id="total"></span></div>
+<button class="btn full" id="quote">Request quote</button></div>
+<div class="note">Prototype only. The live website will use RSAinn's locked daily rates and booking availability. Requesting a quote does not reserve dates.</div>
+</aside>
+</div>
+</div>
+
+
+<section class="offers" id="offers"><div class="wrap">
+<div class="eyebrow">Special offers <span class="brandMark" aria-hidden="true"></span></div><h2>Stay a little longer. Save a little more.</h2>
+<p class="copy">Eligible promotions are applied automatically when you select your dates. Promotions do not stack — RSAinn applies the best qualifying offer.</p>
+<div class="offergrid">
+  <div class="offer"><span class="offerbadge">SAVE 10%</span><h3>Midweek Escape</h3><p>Check in on <strong>Monday</strong> and check out on <strong>Friday</strong> and receive <span class="saving">10% off accommodation</span>.</p></div>
+  <div class="offer"><span class="offerbadge">SAVE 15%</span><h3>Stay Longer</h3><p>Stay <strong>6 nights or more</strong>, regardless of your arrival day, and receive <span class="saving">15% off accommodation</span>.</p></div>
+</div>
+</div></section>
+
+<section class="explore" id="explore"><div class="wrap">
+<div class="eyebrow">The real reason to visit <span class="brandMark" aria-hidden="true"></span></div><h2>Your South Coast getaway starts here.</h2>
+<p class="explorelead">Driftsands 108 is your base. The experience is everything around it — beach mornings, lagoon adventures, fishing, neighbouring seaside towns and memorable day trips.</p>
+<div class="cards">
+<div class="card"><div class="icon">🌊</div><h3>Uvongo Beach</h3><p>A distinctive coastal setting with beach, rock pools, tidal pool, pier and the famous waterfall-and-lagoon backdrop.</p></div>
+<div class="card"><div class="icon">💦</div><h3>Waterfall & Lagoon</h3><p>Uvongo's 23-metre waterfall drops into the lagoon behind the beach — one of the area's signature sights.</p></div>
+<div class="card"><div class="icon">🛶</div><h3>Paddle & Explore</h3><p>Kayaks and pedal boats are available around the lagoon area, offering another way to enjoy the scenery. Always follow current local water-safety signage.</p></div>
+<div class="card"><div class="icon">🎣</div><h3>Fishing</h3><p>Try your luck from the local pier and rocks, or make a day of it with a South Coast deep-sea fishing charter.</p></div><div class="card"><div class="icon">🐋</div><h3>Whale Season</h3><p>During the seasonal migration, watch the ocean from the balcony and along the South Coast for the chance to spot passing whales. Sightings are seasonal and not guaranteed.</p></div>
+<div class="card"><div class="icon">🏖️</div><h3>Beach Hop</h3><p>Explore Uvongo, Manaba, Margate, Ramsgate, Shelly Beach and other coastal spots without being tied to just one beach.</p></div>
+<div class="card"><div class="icon">🛍️</div><h3>Easy & Convenient</h3><p>Groceries, restaurants and everyday essentials are nearby, with Margate and Shelly Beach also within easy reach.</p></div>
+</div>
+</div></section>
+
+
+<section class="exploreGallery"><div class="wrap">
+<div class="galleryTop"><div><div class="eyebrow" style="color:#e4c57d">Explore the area</div><h2>See what waits beyond Driftsands 108</h2><p>Nearby destinations and experiences · kept separate from the property gallery.</p></div><button class="galleryButton" onclick="openLightbox('area')">View full screen</button></div>
+<div class="carousel" data-gallery="area"><div class="track">
+<div class="slide area"><div class="placeholder"><span class="big">🏖️</span><strong>Uvongo Beach</strong><small>Destination image placeholder</small></div><div class="caption"><strong>Uvongo Beach</strong><span>Beach days close to your holiday base.</span></div></div>
+<div class="slide area"><div class="placeholder"><span class="big">💦</span><strong>Uvongo Lagoon & Waterfall</strong><small>Destination image placeholder</small></div><div class="caption"><strong>Lagoon & Waterfall</strong><span>One of Uvongo's most recognisable coastal settings.</span></div></div>
+<div class="slide area"><div class="placeholder"><span class="big">🎣</span><strong>Fishing Pier</strong><small>Destination image placeholder</small></div><div class="caption"><strong>Fishing</strong><span>Enjoy local shore fishing or plan a charter experience.</span></div></div>
+<div class="slide area"><div class="placeholder"><span class="big">🛶</span><strong>Lagoon Adventures</strong><small>Destination image placeholder</small></div><div class="caption"><strong>Paddling</strong><span>Kayaking and pedal-boat experiences around the lagoon area.</span></div></div>
+<div class="slide area"><div class="placeholder"><span class="big">🌴</span><strong>Margate</strong><small>Destination image placeholder</small></div><div class="caption"><strong>Margate</strong><span>Beachfront, restaurants and classic South Coast holiday atmosphere.</span></div></div>
+<div class="slide area"><div class="placeholder"><span class="big">🌊</span><strong>Shelly Beach</strong><small>Destination image placeholder</small></div><div class="caption"><strong>Shelly Beach</strong><span>Beaches, shopping, dining and coastal outings nearby.</span></div></div>
+<div class="slide area"><div class="placeholder"><span class="big">🏝️</span><strong>Ramsgate</strong><small>Destination image placeholder</small></div><div class="caption"><strong>Ramsgate</strong><span>Another relaxed South Coast beach day to add to your itinerary.</span></div></div>
+<div class="slide area"><div class="placeholder"><span class="big">⛰️</span><strong>Oribi Gorge</strong><small>Destination image placeholder</small></div><div class="caption"><strong>Oribi Gorge</strong><span>Trade the shoreline for dramatic inland scenery and adventure.</span></div></div>
+<div class="slide area"><div class="placeholder"><span class="big">🦒</span><strong>Lake Eland</strong><small>Destination image placeholder</small></div><div class="caption"><strong>Lake Eland</strong><span>A scenic inland day-trip option around the Oribi Gorge area.</span></div></div>
+<div class="slide area"><div class="placeholder"><span class="big">🧗</span><strong>Wild 5 Adventures</strong><small>Destination image placeholder</small></div><div class="caption"><strong>Wild 5 Adventures</strong><span>Add an adventure day to your South Coast getaway.</span></div></div>
+<div class="slide area"><div class="placeholder"><span class="big">🚤</span><strong>Deep-Sea Fishing</strong><small>Destination image placeholder</small></div><div class="caption"><strong>Ocean Adventures</strong><span>Charter availability depends on operators and sea conditions.</span></div></div>
+</div><button class="arrow prev" aria-label="Previous photo">‹</button><button class="arrow next" aria-label="Next photo">›</button><div class="counter"></div></div><div class="dots" data-dots="area"></div>
+</div></section>
+<section class="beaches"><div class="wrap"><div class="eyebrow">Explore nearby</div><h2>One stay. Plenty of coastline.</h2><p class="copy">Uvongo sits between several popular South Coast destinations, making Driftsands 108 a practical base for exploring more than one seaside town.</p>
+<div class="beachrow"><div class="beach"><strong>Uvongo</strong><span>Your local beach, lagoon, waterfall, pier and coastal walks.</span></div><div class="beach"><strong>Manaba</strong><span>A neighbouring coastal stop just south of Uvongo.</span></div><div class="beach"><strong>Margate</strong><span>Popular beachfront, restaurants and holiday-town atmosphere.</span></div><div class="beach"><strong>Shelly Beach</strong><span>Another nearby coastal hub for beaches, shopping and outings.</span></div><div class="beach"><strong>Ramsgate</strong><span>Head further south for another relaxed South Coast beach day.</span></div></div>
+</div></section>
+
+<section class="daytrips"><div class="wrap"><div class="eyebrow">Go beyond the beach</div><h2>Turn a few nights into an adventure.</h2>
+<div class="daygrid">
+<div class="trip"><h3>Oribi Gorge & Wild 5 Adventures</h3><p>Swap the coastline for dramatic gorge scenery and adventure activities. Wild 5 operates in Oribi Gorge and offers experiences including quad expeditions and gorge-based adventures.</p><a href="https://www.wild5adventures.co.za/" target="_blank" rel="noopener">Explore Wild 5 →</a></div>
+<div class="trip"><h3>Lake Eland & the South Coast interior</h3><p>Plan a scenic day away from the shoreline and discover the landscapes around the Oribi Gorge area. This is the kind of outing that makes Driftsands 108 more than a beach-only holiday base.</p></div>
+<div class="trip"><h3>Deep-sea fishing</h3><p>For anglers, the coast offers opportunities to turn a holiday morning into a full offshore fishing experience. Charter availability and sea conditions should always be confirmed directly with operators.</p></div>
+<div class="trip"><h3>Make your own South Coast route</h3><p>Mix beach days with local restaurants, shopping, coastal walks, fishing and inland adventures. Stay central, then choose a different experience each day.</p></div>
+</div></div></section>
+
+<section class="location" id="location"><div class="wrap"><div class="eyebrow">Location</div><h2>Uvongo, KwaZulu-Natal South Coast</h2><p class="copy">A convenient base between Margate and Shelly Beach, with neighbouring beaches and South Coast attractions within easy reach.</p><div class="map">Interactive map will be added here<br><span style="font-weight:500;color:#66716c">Driftsands 108 · Uvongo</span></div></div></section>
+
+<section class="finalcta"><div class="wrap"><div class="eyebrow">RSAinn Holiday Getaways</div><h2>Come for the coast. Stay at Driftsands 108.</h2><p>Check your dates and start planning your Uvongo getaway.</p><a class="btn" href="#booking">Check availability</a></div></section>
+</main>
+
+<div class="lightbox" id="lightbox"><div class="lightboxInner"><button class="closeLB" onclick="closeLightbox()" aria-label="Close">×</button><div id="lbSlide"></div><div class="lbCaption" id="lbCaption"></div><button class="arrow prev" id="lbPrev">‹</button><button class="arrow next" id="lbNext">›</button></div></div>
+<footer><div class="wrap foot"><div><strong>RSAinn Holiday Getaways</strong><p>Driftsands 108 · Uvongo · KZN South Coast</p><p>Stay. Explore. Make Memories.</p></div><img src="rsainn-logo-dark.png" alt="RSAinn"></div></footer>
+<div class="mobile"><div><strong>Driftsands 108</strong><div class="small">Uvongo · KZN South Coast</div></div><a class="btn" href="#booking">Check dates</a></div>
+
+<script>
+// V4 demo calendar. Replace demoRate()/blockedDates with Supabase daily_rates + bookings in live integration.
+const clean=document.getElementById('clean'), daysEl=document.getElementById('calendarDays'), titleEl=document.getElementById('monthTitle');
+const today=new Date(); today.setHours(0,0,0,0);
+let view=new Date(today.getFullYear(),today.getMonth(),1), checkIn=null, checkOut=null;
+
+const blockedDates=new Set([
+  // Demonstration blocks only — remove when Supabase is connected.
+  dateKey(addDays(today,8)),dateKey(addDays(today,9)),dateKey(addDays(today,10)),
+  dateKey(addDays(today,21)),dateKey(addDays(today,22))
+]);
+function addDays(d,n){let x=new Date(d);x.setDate(x.getDate()+n);return x}
+function dateKey(d){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+function same(a,b){return a&&b&&dateKey(a)===dateKey(b)}
+function demoRate(d){let day=d.getDay();return (day===5||day===6)?1450:1250}
+function money(n){return `R${Math.round(n).toLocaleString()}`}
+function pretty(d){return d?d.toLocaleDateString('en-ZA',{day:'numeric',month:'short',year:'numeric'}):'Select date'}
+function isBlocked(d){return blockedDates.has(dateKey(d))}
+function hasBlockedNight(a,b){for(let d=new Date(a);d<b;d=addDays(d,1))if(isBlocked(d))return true;return false}
+
+function render(){
+ titleEl.textContent=view.toLocaleDateString('en-ZA',{month:'long',year:'numeric'});
+ daysEl.innerHTML='';
+ const y=view.getFullYear(),m=view.getMonth(),first=new Date(y,m,1),last=new Date(y,m+1,0);
+ for(let i=0;i<first.getDay();i++){let x=document.createElement('div');x.className='day muted';daysEl.appendChild(x)}
+ for(let n=1;n<=last.getDate();n++){
+  const d=new Date(y,m,n),el=document.createElement('button');el.type='button';el.className='day';
+  if(d<today)el.classList.add('disabled');
+  if(isBlocked(d))el.classList.add('booked');
+  if(same(d,checkIn)||same(d,checkOut))el.classList.add('selected');
+  if(checkIn&&checkOut&&d>checkIn&&d<checkOut)el.classList.add('range');
+  el.innerHTML=`<div class="num">${n}</div><div class="rate">${isBlocked(d)?'UNAVAILABLE':money(demoRate(d))}</div>`;
+  if(d>=today&&!isBlocked(d))el.onclick=()=>choose(d);
+  daysEl.appendChild(el);
+ }
+ document.getElementById('inText').textContent=pretty(checkIn);
+ document.getElementById('outText').textContent=pretty(checkOut);
+ document.getElementById('prevMonth').disabled=(view.getFullYear()===today.getFullYear()&&view.getMonth()===today.getMonth());
+}
+function choose(d){
+ if(!checkIn||checkOut||d<=checkIn){checkIn=d;checkOut=null;document.getElementById('summary').style.display='none'}
+ else{
+   if(hasBlockedNight(checkIn,d)){alert('That date range includes an unavailable night. Please choose another range.');checkIn=d;checkOut=null}
+   else checkOut=d;
+ }
+ render();
+}
+document.getElementById('prevMonth').onclick=()=>{view=new Date(view.getFullYear(),view.getMonth()-1,1);render()};
+document.getElementById('nextMonth').onclick=()=>{view=new Date(view.getFullYear(),view.getMonth()+1,1);render()};
+clean.onchange=()=>document.getElementById('cleanqty').style.display=clean.checked?'block':'none';
+
+function promotion(a,n){
+ if(n>=6)return{name:"Stay Longer · 15% off",rate:.15};
+ if(a.getDay()===1&&n===4)return{name:"Midweek Escape · 10% off",rate:.10};
+ return{name:"",rate:0};
+}
+document.getElementById('calc').onclick=()=>{
+ if(!checkIn||!checkOut){alert('Please select your check-in and check-out dates on the calendar.');return}
+ let n=0,base=0;for(let d=new Date(checkIn);d<checkOut;d=addDays(d,1)){n++;base+=demoRate(d)}
+ const p=promotion(checkIn,n),disc=Math.round(base*p.rate),accom=base-disc,q=clean.checked?+document.getElementById('qty').value:0,c=q*150;
+ document.getElementById('nights').textContent=`${n} night${n>1?'s':''} · daily rates`;
+ document.getElementById('baseprice').textContent=money(base);
+ document.getElementById('promorow').style.display=p.rate?'flex':'none';
+ document.getElementById('promoname').textContent=p.name;document.getElementById('discount').textContent=p.rate?`− ${money(disc)}`:'';
+ document.getElementById('stayprice').textContent=money(accom);
+ document.getElementById('cleanrow').style.display=c?'flex':'none';document.getElementById('cleanprice').textContent=money(c);
+ document.getElementById('total').textContent=money(accom+c);document.getElementById('summary').style.display='block';
+};
+document.getElementById('quote').onclick=()=>alert('V4 front-end is ready. Next step: create this quote in the existing RSAinn Supabase quotation system.');
+
+const galleryState={property:0,area:0};
+function setupGallery(name){
+ const c=document.querySelector(`[data-gallery="${name}"]`), track=c.querySelector('.track'), slides=[...c.querySelectorAll('.slide')], dots=document.querySelector(`[data-dots="${name}"]`), counter=c.querySelector('.counter');
+ dots.innerHTML=slides.map((_,i)=>`<button class="gdot ${i===0?'active':''}" aria-label="Photo ${i+1}"></button>`).join('');
+ const go=i=>{galleryState[name]=(i+slides.length)%slides.length;track.style.transform=`translateX(-${galleryState[name]*100}%)`;counter.textContent=`${galleryState[name]+1} / ${slides.length}`;[...dots.children].forEach((d,j)=>d.classList.toggle('active',j===galleryState[name]))};
+ c.querySelector('.prev').onclick=()=>go(galleryState[name]-1);c.querySelector('.next').onclick=()=>go(galleryState[name]+1);[...dots.children].forEach((d,i)=>d.onclick=()=>go(i));
+ let sx=0;c.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});c.addEventListener('touchend',e=>{let dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>45)go(galleryState[name]+(dx<0?1:-1))},{passive:true});go(0);
+}
+let lbName='',lbIndex=0;
+function openLightbox(name){lbName=name;lbIndex=galleryState[name];document.getElementById('lightbox').classList.add('open');document.body.style.overflow='hidden';drawLB()}
+function drawLB(){const slides=[...document.querySelector(`[data-gallery="${lbName}"]`).querySelectorAll('.slide')],src=slides[lbIndex];document.getElementById('lbSlide').innerHTML=`<div class="slide ${lbName==='area'?'area':''}">${src.querySelector('.placeholder').outerHTML}</div>`;const cap=src.querySelector('.caption');document.getElementById('lbCaption').innerHTML=cap?cap.innerHTML:''}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
+document.getElementById('lbPrev').onclick=()=>{const n=document.querySelectorAll(`[data-gallery="${lbName}"] .slide`).length;lbIndex=(lbIndex-1+n)%n;drawLB()};
+document.getElementById('lbNext').onclick=()=>{const n=document.querySelectorAll(`[data-gallery="${lbName}"] .slide`).length;lbIndex=(lbIndex+1)%n;drawLB()};
+document.getElementById('lightbox').addEventListener('click',e=>{if(e.target.id==='lightbox')closeLightbox()});
+document.addEventListener('keydown',e=>{if(!document.getElementById('lightbox').classList.contains('open'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowRight')document.getElementById('lbNext').click();if(e.key==='ArrowLeft')document.getElementById('lbPrev').click()});
+setupGallery('property');setupGallery('area');
+
+render();
+</script>
+</body></html>
+<style>
+/* V6 premium pattern refinement */
+.hero:before{display:none!important;content:none!important}
+.africanBand{
+  height:44px;
+  border-top:3px solid var(--gold);
+  border-bottom:3px solid var(--gold);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 3px 10px rgba(4,61,50,.08);
+  background-color:var(--emerald-deep);
+  background-image:
+    linear-gradient(135deg,transparent 0 34%,var(--gold) 34% 42%,transparent 42% 58%,#b63c32 58% 66%,transparent 66%),
+    linear-gradient(45deg,transparent 0 34%,#f8f1df 34% 42%,transparent 42% 58%,var(--emerald) 58% 66%,transparent 66%),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 2px,transparent 2px 16px);
+  background-size:96px 44px,96px 44px,32px 44px;
+  background-position:0 0,48px 0,0 0;
+}
+.africanBand:before,.africanBand:after{content:none!important}
+.brandMark{
+  width:72px;height:10px;margin-left:12px;
+  background:linear-gradient(90deg,var(--emerald) 0 22%,var(--gold) 22% 44%,#b63c32 44% 66%,var(--gold) 66% 78%,var(--emerald) 78%);
+  clip-path:polygon(0 50%,10% 0,20% 50%,30% 0,40% 50%,50% 0,60% 50%,70% 0,80% 50%,90% 0,100% 50%,90% 100%,80% 50%,70% 100%,60% 50%,50% 100%,40% 50%,30% 100%,20% 50%,10% 100%);
+}
+@media(max-width:560px){
+ .africanBand{height:32px;background-size:72px 32px,72px 32px,24px 32px;background-position:0 0,36px 0,0 0}
+}
+</style>
