@@ -152,7 +152,7 @@ footer{border-top:5px solid var(--gold);background:linear-gradient(135deg,#031d1
 <div class="row" id="cleanrow" style="display:none"><span>Housekeeping</span><strong id="cleanprice"></strong></div>
 <div class="row total"><span>Estimated total</span><span id="total"></span></div>
 <button class="btn full" id="quote">Request quote</button></div>
-<div class="note">Prototype only. The live website will use RSAinn's locked daily rates and booking availability. Requesting a quote does not reserve dates.</div>
+<div class="note">Live availability and nightly rates are synced with RSAinn's quotation system. Requesting a quote does not reserve dates.</div>
 </aside>
 </div>
 </div>
@@ -218,26 +218,36 @@ footer{border-top:5px solid var(--gold);background:linear-gradient(135deg,#031d1
 <footer><div class="wrap foot"><div><strong>RSAinn Holiday Getaways</strong><p>Driftsands 108 · Uvongo · KZN South Coast</p><p>Stay. Explore. Make Memories.</p></div><img src="rsainn-logo-dark.png" alt="RSAinn"></div></footer>
 <div class="mobile"><div><strong>Driftsands 108</strong><div class="small">Uvongo · KZN South Coast</div></div><a class="btn" href="#booking">Check dates</a></div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-// V4 demo calendar. Replace demoRate()/blockedDates with Supabase daily_rates + bookings in live integration.
+// LIVE RSAinn calendar — read-only connection to quotation portal
+const SUPABASE_URL="https://xhxwjaobubxbretiqwsr.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY="sb_publishable_dN3KP37RRjRY-_0SFCYPkA_lsszaNoH";
+const supabaseClient=supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
+const PROPERTY_ID=1;
 const clean=document.getElementById('clean'), daysEl=document.getElementById('calendarDays'), titleEl=document.getElementById('monthTitle');
 const today=new Date(); today.setHours(0,0,0,0);
 let view=new Date(today.getFullYear(),today.getMonth(),1), checkIn=null, checkOut=null;
-
-const blockedDates=new Set([
-  // Demonstration blocks only — remove when Supabase is connected.
-  dateKey(addDays(today,8)),dateKey(addDays(today,9)),dateKey(addDays(today,10)),
-  dateKey(addDays(today,21)),dateKey(addDays(today,22))
-]);
+let rates={},bookings=[];
 function addDays(d,n){let x=new Date(d);x.setDate(x.getDate()+n);return x}
 function dateKey(d){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
 function same(a,b){return a&&b&&dateKey(a)===dateKey(b)}
-function demoRate(d){let day=d.getDay();return (day===5||day===6)?1450:1250}
-function money(n){return `R${Math.round(n).toLocaleString()}`}
+function money(n){return `R${Math.round(n).toLocaleString('en-ZA')}`}
 function pretty(d){return d?d.toLocaleDateString('en-ZA',{day:'numeric',month:'short',year:'numeric'}):'Select date'}
-function isBlocked(d){return blockedDates.has(dateKey(d))}
+function isBlocked(d){const k=dateKey(d);return bookings.some(b=>b.check_in&&b.check_out&&k>=b.check_in&&k<b.check_out)}
 function hasBlockedNight(a,b){for(let d=new Date(a);d<b;d=addDays(d,1))if(isBlocked(d))return true;return false}
-
+function nightlyRate(d){const k=dateKey(d);return Object.prototype.hasOwnProperty.call(rates,k)?Number(rates[k]):null}
+async function loadCalendarData(){
+ const y=view.getFullYear(),m=view.getMonth(),first=dateKey(new Date(y,m,1)),last=dateKey(new Date(y,m+1,0));
+ daysEl.innerHTML='<div style="grid-column:1/-1;padding:20px;text-align:center">Loading live availability…</div>';
+ const rr=await supabaseClient.from('daily_rates').select('rate_date, nightly_rate').eq('property_id',PROPERTY_ID).gte('rate_date',first).lte('rate_date',last);
+ if(rr.error){console.error(rr.error);daysEl.innerHTML='<div style="grid-column:1/-1;padding:20px;color:#a94442">Unable to load live rates.</div>';return}
+ rates={};(rr.data||[]).forEach(r=>rates[r.rate_date]=Number(r.nightly_rate));
+ const br=await supabaseClient.from('bookings').select('id, check_in, check_out, booking_status').eq('property_id',PROPERTY_ID).lte('check_in',last).gt('check_out',first);
+ if(br.error){console.error(br.error);daysEl.innerHTML='<div style="grid-column:1/-1;padding:20px;color:#a94442">Unable to load availability.</div>';return}
+ bookings=(br.data||[]).filter(x=>!['cancelled','canceled'].includes(String(x.booking_status||'').toLowerCase()));
+ render();
+}
 function render(){
  titleEl.textContent=view.toLocaleDateString('en-ZA',{month:'long',year:'numeric'});
  daysEl.innerHTML='';
@@ -265,8 +275,8 @@ function choose(d){
  }
  render();
 }
-document.getElementById('prevMonth').onclick=()=>{view=new Date(view.getFullYear(),view.getMonth()-1,1);render()};
-document.getElementById('nextMonth').onclick=()=>{view=new Date(view.getFullYear(),view.getMonth()+1,1);render()};
+document.getElementById('prevMonth').onclick=async()=>{view=new Date(view.getFullYear(),view.getMonth()-1,1);checkIn=null;checkOut=null;document.getElementById('summary').style.display='none';await loadCalendarData()};
+document.getElementById('nextMonth').onclick=async()=>{view=new Date(view.getFullYear(),view.getMonth()+1,1);checkIn=null;checkOut=null;document.getElementById('summary').style.display='none';await loadCalendarData()};
 clean.onchange=()=>document.getElementById('cleanqty').style.display=clean.checked?'block':'none';
 
 function promotion(a,n){
@@ -276,7 +286,7 @@ function promotion(a,n){
 }
 document.getElementById('calc').onclick=()=>{
  if(!checkIn||!checkOut){alert('Please select your check-in and check-out dates on the calendar.');return}
- let n=0,base=0;for(let d=new Date(checkIn);d<checkOut;d=addDays(d,1)){n++;base+=demoRate(d)}
+ let n=0,base=0;for(let d=new Date(checkIn);d<checkOut;d=addDays(d,1)){const r=nightlyRate(d);if(r===null){alert('A nightly rate is missing for part of this stay.');return}n++;base+=r}
  const p=promotion(checkIn,n),disc=Math.round(base*p.rate),accom=base-disc,q=clean.checked?+document.getElementById('qty').value:0,c=q*150;
  document.getElementById('nights').textContent=`${n} night${n>1?'s':''} · daily rates`;
  document.getElementById('baseprice').textContent=money(base);
@@ -306,7 +316,7 @@ document.getElementById('lightbox').addEventListener('click',e=>{if(e.target.id=
 document.addEventListener('keydown',e=>{if(!document.getElementById('lightbox').classList.contains('open'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowRight')document.getElementById('lbNext').click();if(e.key==='ArrowLeft')document.getElementById('lbPrev').click()});
 setupGallery('property');setupGallery('area');
 
-render();
+loadCalendarData();
 </script>
 </body></html>
 <style>
