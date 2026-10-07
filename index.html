@@ -94,6 +94,64 @@ footer .foot{position:relative;z-index:1}
 footer{border-top:5px solid var(--gold);background:linear-gradient(135deg,#031d17,#064336)}
 ::selection{background:var(--gold);color:var(--emerald-deep)}
 
+
+/* V6.2 responsive live-calendar fix */
+.introgrid{grid-template-columns:minmax(0,1fr) minmax(340px,390px)}
+.book,.calendarBox,.week,.days{min-width:0;max-width:100%}
+.calendarBox{overflow:hidden}
+.week,.days{grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;width:100%}
+.day{
+  width:100%;min-width:0;max-width:100%;overflow:hidden;
+  padding:5px 1px;min-height:52px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+}
+.day .num,.day .rate{max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:clip}
+.day .rate{font-size:7px;line-height:1.05}
+.day.booked .rate{font-size:0;text-decoration:none}
+.day.booked .rate:after{content:"BOOKED";font-size:7px;font-weight:850;letter-spacing:-.02em}
+.legend{align-items:center}
+@media(max-width:1100px) and (min-width:901px){
+  .wrap{padding-left:18px;padding-right:18px}
+  .introgrid{grid-template-columns:minmax(0,1fr) 360px;gap:30px}
+  .book{padding:18px}
+  .calendarBox{padding:10px}
+  .day{min-height:48px}
+}
+@media(max-width:900px){
+  .introgrid{display:block}
+  .book{width:100%;max-width:620px;margin:28px auto;position:static}
+  .calendarBox{width:100%}
+  .week,.days{grid-template-columns:repeat(7,minmax(0,1fr))}
+}
+@media(max-width:560px){
+  .book{padding:14px;border-radius:16px}
+  .book h3{font-size:24px}
+  .dateReadout{grid-template-columns:1fr 1fr}
+  .dateReadout div{padding:9px 8px;min-width:0}
+  .dateReadout strong{font-size:11px}
+  .calendarBox{padding:9px 6px;border-radius:13px}
+  .calHead{margin-bottom:7px}
+  .calHead strong{font-size:17px}
+  .calHead button{width:32px;height:32px}
+  .week,.days{gap:1px}
+  .dow{font-size:7px;padding:3px 0}
+  .day{min-height:44px;border-radius:6px;padding:3px 0}
+  .day .num{font-size:11px}
+  .day .rate{font-size:6.5px;margin-top:3px}
+  .day.booked .rate:after{font-size:6.5px}
+  .legend{gap:8px;font-size:9px}
+  .calHint{font-size:10px}
+}
+@media(max-width:380px){
+  .wrap{padding-left:10px;padding-right:10px}
+  .book{padding:11px}
+  .calendarBox{padding:8px 4px}
+  .day{min-height:41px}
+  .day .num{font-size:10px}
+  .day .rate{font-size:6px}
+  .day.booked .rate:after{font-size:6px}
+}
+
 </style>
 </head>
 <body>
@@ -265,7 +323,7 @@ el.innerHTML=`
   <div class="num">${n}</div>
   <div class="rate">
     ${isBlocked(d)
-      ? 'UNAVAILABLE'
+      ? 'BOOKED'
       : liveRate !== null
         ? money(liveRate)
         : 'NO RATE'}
