@@ -259,8 +259,21 @@ function render(){
   if(isBlocked(d))el.classList.add('booked');
   if(same(d,checkIn)||same(d,checkOut))el.classList.add('selected');
   if(checkIn&&checkOut&&d>checkIn&&d<checkOut)el.classList.add('range');
-  el.innerHTML=`<div class="num">${n}</div><div class="rate">${isBlocked(d)?'UNAVAILABLE':money(demoRate(d))}</div>`;
-  if(d>=today&&!isBlocked(d))el.onclick=()=>choose(d);
+  const liveRate = nightlyRate(d);
+
+el.innerHTML=`
+  <div class="num">${n}</div>
+  <div class="rate">
+    ${isBlocked(d)
+      ? 'UNAVAILABLE'
+      : liveRate !== null
+        ? money(liveRate)
+        : 'NO RATE'}
+  </div>
+`;
+ if(d>=today && !isBlocked(d) && liveRate !== null){
+  el.onclick=()=>choose(d);
+}
   daysEl.appendChild(el);
  }
  document.getElementById('inText').textContent=pretty(checkIn);
